@@ -362,6 +362,7 @@ void setup()
 
   WiFi.mode(WIFI_STA);
   ThingSpeak.begin(client);
+  Serial.println("code started wifi connected");
 }
 
 void loop()
@@ -374,6 +375,8 @@ void loop()
   if (WiFi.status() != WL_CONNECTED)
   {
     Serial.println("WiFi Not Connected");
+    delay(500);
+    Serial.print(".");
   }
   else
   {
